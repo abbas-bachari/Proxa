@@ -1,12 +1,14 @@
-# Proxa
 
-[![PyPI version](https://img.shields.io/pypi/v/proxa.svg?style=flat-square)](https://pypi.org/project/proxa/)
-[![Python Version](https://img.shields.io/pypi/pyversions/proxa.svg?style=flat-square)](https://www.python.org/)
-[![License](https://img.shields.io/pypi/l/proxa.svg?style=flat-square)](LICENSE)
-[![Downloads](https://img.shields.io/pypi/dm/proxa.svg?style=flat-square)](https://pypi.org/project/proxa/)
-[![GitHub stars](https://img.shields.io/github/stars/abbas-bachari/proxa?style=flat-square)](https://github.com/abbas-bachari/proxa/stargazers)
+<h1 align="center">Proxa</h1>
+<h2 align="center">A simple yet powerful Python library for managing and validating proxies.<h2>
+<p align="center">
+<a href="https://github.com/abbas-bachari/Bixpy"><img src="https://img.shields.io/badge/Python%20-3.8+-green?style=plastic&logo=Python" alt="Python"></a>
+  <a href="https://pypi.org/project/Bixpy/"><img src="https://img.shields.io/pypi/v/proxa?style=plastic" alt="PyPI - Version"></a>
+  <a href="https://pypi.org/project/Bixpy/"><img src="https://img.shields.io/pypi/l/proxa?style=plastic" alt="License"></a>
+  <a href="https://pepy.tech/project/Bixpy"><img src="https://pepy.tech/badge/proxa?style=flat-plastic" alt="Downloads"></a>
+</p>
 
-> **Proxa** — A simple yet powerful Python library for managing and validating proxies.
+## 🛠️ Version 1.0.0
 
 ---
 
