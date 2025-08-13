@@ -2,17 +2,15 @@
 <h1 align="center">Proxa</h1>
 <h2 align="center">A simple yet powerful Python library for managing and validating proxies.<h2>
 <p align="center">
-<a href="https://github.com/abbas-bachari/Bixpy"><img src="https://img.shields.io/badge/Python%20-3.8+-green?style=plastic&logo=Python" alt="Python"></a>
-  <a href="https://pypi.org/project/Bixpy/"><img src="https://img.shields.io/pypi/v/proxa?style=plastic" alt="PyPI - Version"></a>
-  <a href="https://pypi.org/project/Bixpy/"><img src="https://img.shields.io/pypi/l/proxa?style=plastic" alt="License"></a>
-  <a href="https://pepy.tech/project/Bixpy"><img src="https://pepy.tech/badge/proxa?style=flat-plastic" alt="Downloads"></a>
+    <a href="https://github.com/abbas-bachari/proxa"><img src="https://img.shields.io/badge/Python%20-3.8+-green?style=plastic&logo=Python" alt="Python"></a>
+    <a href="https://pypi.org/project/proxa/"><img src="https://img.shields.io/pypi/v/proxa?style=plastic" alt="PyPI - Version"></a>
+    <a href="https://pypi.org/project/proxa/"><img src="https://img.shields.io/pypi/l/proxa?style=plastic" alt="License"></a>
+    <a href="https://pepy.tech/project/proxa"><img src="https://pepy.tech/badge/proxa?style=flat-plastic" alt="Downloads"></a>
 </p>
 
 ## 🛠️ Version 1.0.0
 
----
-
-## 📌 Features
+### 📌 Features
 
 - ✅ Easy proxy parsing from strings, dictionaries, or files
 - 🔄 Automatic proxy rotation
@@ -20,8 +18,6 @@
 - 🧪 Built-in proxy checking with multiple IP lookup services
 - 📦 Ready-to-use formats for `requests`, `Telethon`, and more
 - ⚡ Lightweight and dependency-minimal
-
----
 
 ## 📥 Installation
 
@@ -72,12 +68,8 @@ else:
 working_proxy = manager.get_working_proxy()
 if working_proxy:
     print("Working proxy:", working_proxy.url)
-
-
-
+    
 ```
-
----
 
 ## 🛠 Usage Examples
 
