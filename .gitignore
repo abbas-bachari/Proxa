@@ -1,0 +1,16 @@
+__pypackages__/
+__pycache__/
+.Python
+build/
+test.py
+install.py
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pypirc
+docs/
+dist/
