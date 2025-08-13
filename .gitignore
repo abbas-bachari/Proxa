@@ -14,3 +14,4 @@ venv.bak/
 .pypirc
 docs/
 dist/
+proxies.txt
