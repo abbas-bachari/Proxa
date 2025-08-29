@@ -3,6 +3,7 @@ from urllib.parse import urlparse
 import requests
 from .utils import is_valid_ip
 from requests.exceptions import ProxyError, ConnectTimeout, ReadTimeout
+from typing import Tuple
 class Proxy:
     """
     Proxy is a utility class that represents a single proxy configuration and provides
@@ -101,23 +102,40 @@ class Proxy:
         return f"{self.type}://{self.host}:{self.port}"
 
     @property
-    def for_telethon(self) -> tuple:
+    def for_telethon(self) -> dict:
         """
         Proxy configuration formatted for use with Telethon.
 
-        If the proxy requires authentication, the tuple will contain 6 elements:
-            (type, host, port, use_auth, user, password)
-
-        Otherwise, the tuple will contain 3 elements:
-            (type, host, port)
-
         Returns:
-            tuple
-        """
+            dict: Dictionary compatible with Telethon's proxy parameter.
+                Example with authentication:
+                    {
+                        'proxy_type': 'socks5',
+                        'addr': '1.1.1.1',
+                        'port': 5555,
+                        'username': 'foo',
+                        'password': 'bar',
+                        'rdns': True
+                    }
 
+                Example without authentication:
+                    {
+                        'proxy_type': 'socks5',
+                        'addr': '1.1.1.1',
+                        'port': 5555,
+                        'rdns': True
+                    }
+        """
+        base = {
+            'proxy_type': self.type,
+            'addr': self.host,
+            'port': self.port,
+            'rdns': True
+        }
         if self.user and self.password:
-            return (self.type, self.host, self.port, True, self.user, self.password)
-        return (self.type, self.host, self.port)
+            base['username'] = self.user
+            base['password'] = self.password
+        return base
     @property
     def for_requests(self):
         """
@@ -149,7 +167,7 @@ class Proxy:
             data["password"] = self.password
         return data
 
-    def check(self,timeout=5):
+    def check(self,timeout=5) -> Tuple[bool ,IpInfo|None,str|None]:
    
         """
         Attempts to verify the proxy by querying external IP services.
