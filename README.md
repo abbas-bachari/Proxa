@@ -8,7 +8,7 @@
     <a href="https://pepy.tech/project/proxa"><img src="https://pepy.tech/badge/proxa?style=flat-plastic" alt="Downloads"></a>
 </p>
 
-## 🛠️ Version 1.0.1
+## 🛠️ Version 1.0.2
 
 ### 📌 Features
 

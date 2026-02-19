@@ -1,4 +1,11 @@
 import json
+def get_flag_emoji(country_code):
+
+    if not country_code or len(country_code) != 2:
+        return "🌐"
+
+    return "".join(chr(127397 + ord(c)) for c in country_code.upper())
+
 class IpInfo():
     def __init__(self,ip_address,country_name='',country_code='',source=''):
         """
@@ -12,8 +19,9 @@ class IpInfo():
         """
 
         self.ip_address=ip_address
-        self.country_name=country_name
-        self.country_code=country_code
+        self.country_name=country_name or 'Unknown'
+        self.country_code=country_code or 'Unknown'
+        self.flag=get_flag_emoji(country_code=country_code)
         self.source=source
 
 
@@ -30,6 +38,7 @@ class IpInfo():
             "ip_address": self.ip_address,
             "country_name": self.country_name,
             "country_code": self.country_code,
+            "flag":self.flag
         }
 
     def __str__(self):
